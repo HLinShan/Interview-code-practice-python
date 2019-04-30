@@ -20,6 +20,8 @@ class ListNode:
 
 class Solution:
     def EntryNodeOfLoop(self, pHead):
+        if pHead.next==None:
+            return None
         # write code here
         MeetingNode = self.MeetingNode(pHead)
         if not MeetingNode:
