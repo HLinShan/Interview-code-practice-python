@@ -10,6 +10,9 @@
 都向后走一步，两个指针相遇的位置就是链表的入口。
 
 程序可以运行，但在牛客网上报错 'NoneType' object has no attribute 'next' 不知道为什么？？
+        if pHead.next == None:
+            return None
+ 改了这个错误
 '''
 
 # -*- coding:utf-8 -*-
@@ -20,6 +23,8 @@ class ListNode:
 
 class Solution:
     def EntryNodeOfLoop(self, pHead):
+        if pHead.next == None:
+            return None
         # write code here
         MeetingNode = self.MeetingNode(pHead)
         if not MeetingNode:
